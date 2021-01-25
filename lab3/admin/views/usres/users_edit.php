@@ -5,11 +5,11 @@
 	</div>
 	<div class="mb-3">
 		<label for="exampleFormControlInput1" class="form-label">password</label>
-		<input type="password" class="form-control" id="exampleFormControlInput1" placeholder="*******" name="$pass1">
+		<input type="password" class="form-control" id="exampleFormControlInput1" placeholder="*******" name="pass1">
 	</div>
 	<div class="mb-3">
 		<label for="exampleFormControlInput1" class="form-label">nhập lại password</label>
-		<input type="password" class="form-control" id="exampleFormControlInput1" placeholder="*******" name="$pass2">
+		<input type="password" class="form-control" id="exampleFormControlInput1" placeholder="*******" name="pass2">
 	</div>
 	<div class="mb-3">
 		<label for="exampleFormControlTextarea1" class="form-label">Họ và tên</label>
