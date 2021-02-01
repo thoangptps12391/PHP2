@@ -19,8 +19,9 @@ class dienthoai {
     }
     function index(){
     	$list = $this->model->listrecords();
+        $list1 = $this->model1->listrecords();
     	$page_title ="Danh sách Điện thoại";
-    	$page_file="views/product/product_index.php";
+    	$page_file="views/product/index.php";
     	require_once "layout.php";
     }
     function addnew(){
@@ -32,10 +33,10 @@ class dienthoai {
     function store(){
      	// $tendt, $gia, $giakm, $urlhinh, $thoidiemnhap, $mota, $idnsx, $anhien, $soluongtonkho
     	$tendt=$_POST['tendt'];
-    	$gia=$_POST['gia'];
+    	$gia= $_POST['gia'];
     	$giakm=$_POST['giakm'];
     	$hinh=$_POST['urlhinh'];
-    	$thoidiemnhap= date('j-m-y');
+    	$thoidiemnhap= date('Y-m-d');
     	$urlhinh='../images/'.$hinh;
     	$mota=$_POST['ten'];
     	if (isset($_POST['anhien'])) {
@@ -43,10 +44,10 @@ class dienthoai {
     	} else {
     		$anhien='1';
     	}
-    	$idnsx=$post['idnsx'];
+    	$idnsx=$_REQUEST['idnsx'];
     	$soluongtonkho=$_POST['soluongtonkho'];
-    	$list = $this->model->store($tendt, $gia, $giakm, $urlhinh, $thoidiemnhap, $mota, $idnsx, $anhien, $soluongtonkho);
-    	header("location: ?ctrl=product");
+    	$list = $this->model->store($tendt, (float)$gia, (float)$giakm, $urlhinh, $thoidiemnhap, $mota, (int)$idnsx, (int)$anhien, (int)$soluongtonkho);
+    	header("location: ?ctrl=dienthoai");
     }
     function edit(){
     	$idnsx=$_GET['idnsx'];
@@ -70,8 +71,8 @@ class dienthoai {
     	header("location: ?ctrl=product");
     }
     function delete(){
-    	$id=$_GET['idnsx'];
+    	$id=$_GET['iddt'];
     	$list = $this->model->delete($id);
-    	header("location: ?ctrl=product");
+    	header("location: ?ctrl=dienthoai");
     }
 }?>

@@ -3,7 +3,7 @@
  class model_product extends model_system {
       function store($tendt, $gia, $giakm, $urlhinh, $thoidiemnhap, $mota, $idnsx, $anhien, $soluongtonkho){ 
           //$sql = "INSERT INTO `nhasanxuat` (`idnsx`, `tennsx`, `thutu`, `anhien`) VALUES (NULL, '$ten', '$tt', '$ah');";
-          $sql="INSERT INTO `dienthoai`(`iddt`, `tendt`, `gia`, `giakm`, `urlhinh`, `thoidiemnhap`, `mota`, `solanxem`, `solanmua`, `hot`, `idnsx`, `anhien`, `soluongtonkho`) VALUES (NULL,''$tendt,'$gia','$giakm','$urlhinh','$thoidiemnhap','$mota',0,0,1,'$soluongtonkho');";
+          $sql="INSERT INTO `dienthoai` (`iddt`, `tendt`, `gia`, `giakm`, `urlhinh`, `thoidiemnhap`, `mota`, `solanxem`, `solanmua`, `hot`, `idnsx`, `anhien`, `soluongtonkho`) VALUES (NULL, '$tendt', '$gia', '$giakm', '$urlhinh', '$thoidiemnhap', '$mota', '0', '0', '0', '$idnsx', '$anhien', '$soluongtonkho');";
           $kq= $this->execute($sql);
           return $kq;
       }
@@ -13,7 +13,7 @@
           $kq= $this->execute($sql);
           return $kq;
       }
-      function delete($iduser){  
+      function delete($iddt){  
           $sql = "DELETE FROM `dienthoai` WHERE `dienthoai`.`iddt` = $iddt";
           $kq= $this->execute($sql);
           return $kq;

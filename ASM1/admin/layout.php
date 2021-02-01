@@ -191,9 +191,11 @@
             <h1 class="h5 py-2 border-bottom text-danger">
                 <?=(isset($page_title)==true)? $page_title:"TRANG QUẢN TRỊ";?>
             </h1>
-            <?php if (file_exists($page_file)==true) {
-                require_once "$page_file";
-            }?>
+            <?php if (isset($page_file)) {
+                require_once ($page_file);
+                }
+                else{};
+            ?>
         </div>
         
         <!-- End of Topbar -->

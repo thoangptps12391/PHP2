@@ -1,5 +1,5 @@
 <!-- $tendt, $gia, $giakm, $urlhinh, $thoidiemnhap, $mota, $idnsx, $anhien, $soluongtonkho -->
-<form method="post" action="" class="form-group">
+<form method="post" action="?ctrl=dienthoai&act=store" class="form-group">
 	<div class="mb-3">
 		<label for="exampleFormControlInput" class="form-label">Tên điện thoại</label>
 		<input type="text" class="form-control" id="exampleFormControlInput" placeholder="nhập tên điện thoại" name="tendt">

@@ -27,4 +27,9 @@
           $kq= $this->queryOne($sql);
           return $kq;
       }
+      function idNameCata($id){ 
+          $sql = "SELECT `tennsx` FROM nhasanxuat where idnsx='$id'";
+          $kq= $this->queryOne($sql);
+          return $kq;
+      }
  }?>
